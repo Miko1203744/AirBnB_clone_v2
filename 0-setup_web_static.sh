@@ -3,11 +3,16 @@
 
 apt-get update
 apt-get install -y nginx
-
 mkdir -p /data/web_static/releases/test/
 mkdir -p /data/web_static/shared/
-echo "Holberton School" > /data/web_static/releases/test/index.html
-ln -sf /data/web_static/releases/test/ /data/web_static/current
+echo "<html>
+<head>
+</head>
+<body>
+Holberton School
+</body>
+</html>" > /data/web_static/releases/test/index.html
+ln -sf /data/web_static/current/ /data/web_static/current/test/
 
 chown -R ubuntu /data/
 chgrp -R ubuntu /data/
@@ -36,4 +41,3 @@ printf %s "server {
 }" > /etc/nginx/sites-available/default
 
 service nginx restart
-

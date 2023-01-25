@@ -3,8 +3,11 @@
 
 apt-get update
 apt-get install -y nginx
-mkdir -p /data/web_static/releases/test/
-mkdir -p /data/web_static/shared/
+mkdir /data/
+mkdir /data/web_static/
+mkdir /data/web_static/releases/ 
+mkdir /data/web_static/shared/
+mkdir /data/web_static/releases/test/
 echo "<html>
 <head>
 </head>
@@ -12,7 +15,7 @@ echo "<html>
 Holberton School
 </body>
 </html>" > /data/web_static/releases/test/index.html
-ln -sf /data/web_static/current/test /data/web_static/current/
+ln -sf /data/web_static/current /data/web_static/releases/test/
 
 chown -R ubuntu /data/
 chgrp -R ubuntu /data/

@@ -15,7 +15,7 @@ echo "<html>
 Holberton School
 </body>
 </html>" > /data/web_static/releases/test/index.html
-ln -sf /data/web_static/current /data/web_static/releases/test/
+ln -sf /data/web_static/releases/test/ /data/web_static/current
 
 chown -R ubuntu /data/
 chgrp -R ubuntu /data/

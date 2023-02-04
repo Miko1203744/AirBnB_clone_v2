@@ -7,7 +7,7 @@ def hello_hbnb():
 @app.route("/hbnb",strict_slashes=False)
 def HBNB():
     return  “HBNB”
-if __name__==__main__:
+if __name__=="__main__":
   app.run(host="0.0.0.0",port=5000)
   
     

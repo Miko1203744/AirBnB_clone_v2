@@ -3,10 +3,10 @@ from flask import Flask
 app=Flask(__name__)
 @app.route("/",strict_slashes=False)
 def Hello_hbnb():
-  return "<h1>Hello HBNB!<h1>"
+  return "Hello HBNB!"
 @app.route("/hbnb",strict_slashes=False)
 def hbnb():
-  return "<h1>HBNB<h1>"
+  return "HBNB"
 @app.route("/c/<text>",strict_slashes=False)
 def c(text):
   text=text.replace("_"," ")

@@ -12,7 +12,7 @@ def c(text):
   text=text.replace("_"," ")
   return "C {}.format(text)
 @app.route("/python/<text>",strict_slashes=False)
-def python(text):
+def python(text="is cool"):
   text=text.replace("_"," ")
   return "python {}.format(text)
 if __name__="__main__":
